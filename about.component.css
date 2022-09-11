@@ -1,0 +1,11 @@
+div {
+    padding: 2rem;
+    margin: 1rem;
+}
+
+p {
+    background-color: #fff;
+    padding: 1rem;
+    max-width: fit-content;
+   
+}
