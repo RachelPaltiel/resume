@@ -1,0 +1,12 @@
+html {
+    background-color: #dee2e6;
+    color: #6c757c;
+    font-family: 'Trebuchet MS';
+    font-size: 1rem;
+}
+
+h1 {
+    float: left;
+    margin-left: 2.5rem;
+}
+

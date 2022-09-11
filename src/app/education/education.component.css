@@ -1,0 +1,20 @@
+div {
+    padding: 2rem;
+    margin: 1rem;
+}
+
+table {
+    text-align: left;
+    border-spacing: 0 1rem; 
+    
+}
+
+td , th {
+    padding: 1rem;
+    border-color: #dee2e6;
+    background-color: #fff;
+}
+
+th {
+    margin: 1rem;
+}

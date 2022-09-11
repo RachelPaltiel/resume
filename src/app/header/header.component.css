@@ -1,0 +1,40 @@
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
+.menu a {
+    background-color: #dee2e6 ;
+    text-decoration: none;
+    border: none;
+    color: #6c757c;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5rem;
+    padding: .5rem;
+
+}
+
+.menu a:hover {
+    background-color: #6c757c;
+    color: #dee2e6;
+    cursor:pointer;
+    left: 1em;
+}
+
+.details {
+    padding: 1.5rem;
+}
+
+.menu a:focus  {
+    background-color: #6c757c;
+    color: #dee2e6;
+}
+
