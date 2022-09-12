@@ -1,7 +1,5 @@
 <div>
-<h2>Tech Stack</h2>
-</div>
-<div>
+    <h2>Programming</h2>
 
     <button (click)="showWikiSQL()" >SQL</button>
     <button (click)="showWikiCSharp()" >C#</button>
@@ -12,8 +10,262 @@
     <button (click)="showWikiAngular()" >Angular</button>
 
 </div>
+
+    <table>
+        <h2>Tools</h2>
+        <tr>
+            <td>Version Control: GitHub & SVN</td>
+        </tr>
+        <tr>
+            <td>Project Management: Jira & TFS</td>
+        </tr>
+
+        <h2><br>Languages</h2>
+        <tr>
+            <td>English: Native</td>
+        </tr>
+        <tr>
+            <td>Hebrew: Native</td>
+        </tr>
+        <h2><br>Just for Fun:</h2>
+        <tr>
+            <td>Design: Figma</td>
+        </tr>
+        <tr>
+            <td>Insperation: Steve Jobs</td>
+        </tr>
+    </table>
+
 <div class="SQLiFrame" id="SQLWiki">
-    <iframe src="https://en.wikipedia.org/wiki/SQL">SQL</iframe>
+    <p>Sql snippet: when executed, a new DB is created:</p>
+    <pre><code>
+
+    Create table Subscription
+    (
+    SubscriptionID int identity primary key,
+    SubscriptionName nvarchar(20) not null unique,
+    SubscriptionCost float not null,
+    SubscriptionDesc nvarchar(250) not null
+    )
+
+
+    create table Account
+    (
+    AccountID varchar(9) check(AccountID not like '%[^0-9]%') primary key,
+    AccountName nvarchar(100) not null,
+    AccountCreationDate date check(accountcreationdate <= getdate()) not null,
+    SubscriptionID int foreign key references Subscription(SubscriptionID),
+    )
+
+
+    Create table Address
+    (
+    AddressID int identity Primary key,
+    AccountID varchar(9) foreign key references Account(AccountID),
+    Street nvarchar(30) not null,
+    City nvarchar(30) not null,
+    PostalCode int,
+    Country nvarchar(20) not null,
+    AptNum tinyint,
+    FloorNum tinyint
+    )
+
+
+    create table CreditCard
+    (
+    CardID int identity primary key,
+    AccountID varchar(9) foreign key references Account(AccountID),
+    CardType varchar(10) not null,
+    CardNumber varchar(16) check(cardNumber not like '%[^0-9]%') not null,
+    CardExpDate date check (CardExpDate > getdate()) not null,
+    CardOwnerID varchar(9) check (cardOwnerID not like '%[^0-9]%') not null,
+    CardCVV varchar(3) check(cardCVV not like '%[^0-9]%') not null
+    )
+
+
+    Create table Permission
+    (
+    PermissionID int identity primary key,
+    PermissionName nvarchar(30) not null,
+    PermissionDescription nvarchar(200) not null
+    )
+
+
+    Create table Users
+    (
+    UserEmail varchar(50) check (UserEmail like '_%@_%._%') not null,
+    AccountID varchar(9) foreign key references Account(AccountID),
+    PermissionID int foreign key references Permission(PermissionID),
+    UserName nvarchar(50) not null,
+    UserPhoneNum varchar(10) check(UserPhoneNum not like '%[^0-9]%') unique not null,
+    UserImage nvarchar(250),
+    UserBirthDate date check (datediff(year,Userbirthdate,getdate())>=12) not null,
+    primary key(useremail,AccountID)
+    )
+
+
+
+    Create Table Security
+    (
+    SecurityID int identity primary key,
+    SecurityName nvarchar(50) unique not null,
+    SecurityPass nvarchar(20) unique not null
+    )
+
+
+
+    Create table Color
+    (
+    ColorID int identity primary key,
+    ColorName nvarchar(25) unique not null,
+    ColorHex nvarchar(10) unique not null
+    )
+
+
+
+    create table Notes
+    (
+    NoteID int identity primary key,
+    AccountID varchar(9) foreign key references Account(AccountID),
+    NoteName Nvarchar(50) not null,
+    NoteDesc nvarchar(300) not null,
+    NoteContent nvarchar(2000),
+    SecurityID int foreign key references security(SecurityID),
+    ColorID int references color(ColorID)
+    )
+
+
+
+    Create Table EventStatus
+    (
+    EventStatusID int identity primary key,
+    EventStatusName nvarchar(50) unique not null,
+    EventStatusDesc nvarchar(200)
+    )
+
+
+    Create table Events
+    (
+    EventID int identity primary key,
+    AccountID varchar(9) foreign key references Account(AccountID),
+    EventStatus int foreign key references EventStatus(EventStatusID),
+    SecurityID int references Security(SecurityID),
+    EventNotificationTime datetime check (EventNotificationTime >= getdate())
+    )
+
+
+
+    Create Table FolderIcon
+    (
+    FolderIconID int identity primary key,
+    FolderIconDesription nvarchar(25) unique not null,
+    FolderIconPath nvarchar(250) unique not null
+    )
+
+
+    create table Folders
+    (
+    FolderID int identity primary key,
+    AccountID varchar(9) foreign key references account(AccountID),
+    FolderName nvarchar(100) not null,
+    FolderDescription nvarchar(300),
+    SecurityID int references Security(SecurityID),
+    FolderIcon int references FolderIcon(FolderIconID)
+    )
+
+
+    create table FileType
+    (
+    FileTypeID int identity primary key,
+    FileTypeName nvarchar(100) not null,
+    FileTypeDescription nvarchar(300)
+    )
+
+
+    create table Files
+    (
+    FileID int identity primary key,
+    AccountID varchar(9) foreign key references Account(AccountID),
+    FolderID int foreign key references folders(folderid),
+    FilleTypeID int foreign key references fileType(FileTypeID),
+    FileName nvarchar(100) not null,
+    FileDescription nvarchar(500),
+    FileCreateDate date check(FileCreateDate = getdate()) not null,
+    Security int references Security(SecurityID),
+    FilePath nvarchar(250) unique not null
+    )
+
+
+
+    Create table service
+    (
+    ServiceID int identity primary key,
+    ServiceName nvarchar(100) not null
+    )
+
+
+    create table Suppliers
+    (
+    SupplierID varchar(9) check(SupplierID not like '%[^0-9]%') primary key,
+    SupplierName nvarchar(50) not null,
+    Service int foreign key references service(ServiceID),
+    SupplierURL nvarchar(100)
+    )
+
+
+    create table OtherPayment
+    (
+    OtherPayID int identity primary key,
+    OtherPayName nvarchar(50) not null,
+    OtherPayDescription nvarchar(200)
+    )
+    create table PaymentStatus
+    (
+    PayStatusID int identity primary key,
+    PayStatus bit not null,
+    PayStatusName varchar(10) check(PayStatusName in ('Approved' , 'Denied' , 'Canceled')) not null,
+    PayStatusDescription nvarchar(50)
+    )
+
+
+    create table Payment
+    (
+    PaymentID int identity primary key,
+    PaymentStatus int foreign key references PaymentStatus(PayStatusID),
+    PaymentDate date check(paymentDate <= getdate()) not null,
+    CardID int references creditcard(CardID),
+    OtherPaymentID int references OtherPayment(OtherPayID),
+    check(cardID is not null and otherPaymentID is null or cardID is not null and otherPaymentID is null)
+    )
+
+
+    create table BillStatus
+    (
+    BillStatusID int identity primary key,
+    BillStatus bit not null,
+    BillStatusName nvarchar(50) check(BillStatusName in ('To Pay' , 'Paid' , 'Canceled' , 'Deleted')) not null,
+    BillStatusDescription nvarchar(100)
+    )
+
+
+    create table Bills
+    (
+    BillNumber varchar(6) check(BillNumber not like '%[^0-9]%') not null,
+    AccountID varchar(9) foreign key references Account(AccountID),
+    SupplierID varchar(9) foreign key references suppliers(supplierID),
+    FileID int foreign key references files(fileID),
+    BillDate date not null,
+    BillDueDate date not null,
+    BillAmmount float not null,
+    BillDescription nvarchar(200),
+    PaymentID int references payment(paymentID),
+    BillNotificationDate date check(billNotificationDate >= getdate()),
+    BillStatusID int references billstatus(BillStatusID),
+    primary key(BillNumber , AccountID , SupplierID),
+    check(billDate <= billDueDate)
+    )
+
+    </code></pre>
 </div>
 <div class="CSharpiFrame" id="CSharpWiki">
     <iframe src="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</iframe>
@@ -22,14 +274,60 @@
     <iframe src="https://en.wikipedia.org/wiki/HTML">HTML</iframe>
 </div>
 <div class="CSSiFrame" id="CSSWiki">
-    <iframe src="https://en.wikipedia.org/wiki/CSS">CSS</iframe>
+    <p>CSS code snippet: NavBar</p>
+    <pre><code>
+        &#46;menu &#123;
+            list&#45;style&#45;type&#58; none&#59;
+            display&#58; flex&#59;
+            &#123;
+        
+        &#46;menu li &#123;
+            margin&#58; 1rem&#59;
+            margin&#45;top&#58; 2rem&#59;
+            &#123;
+        
+        &#46;menu a &#123;
+            background&#45;color&#58; &#35;dee2e6 &#59;
+            text&#45;decoration&#58; none&#59;
+            border&#58; none&#59;
+            color: &#35;6c757c&#59;
+            text&#45;align&#58; center&#59;
+            font&#45;family&#58; &apos;Trebuchet MS&apos;&#59;
+            font&#45;size&#58; 1rem&#59;
+            font&#45;weight&#58; bold&#59;
+            border&#45;radius&#58; 5rem&#59;
+            padding&#58; &#46;5rem&#59;
+        
+            &#123;
+        
+        &#46;menu a&#58;hover &#123;
+            background&#45;color&#58; &#35;6c757c&#59;
+            color&#58; &#35;dee2e6&#59;
+            cursor&#58;pointer&#59;
+            left&#58; 1em&#59;
+            &#123;
+        
+        &#46;details &#123;
+            padding&#58; 1&#46;5rem&#59;
+            &#123;
+        
+        &#46;menu a&#58;focus  &#123;
+            background&#45;color&#58; &#35;6c757c&#59;
+            color&#58; &#35;dee2e6&#59;
+            &#123;
+        
+        &#46;menu img &#123;
+            width&#58; 1&#46;5rem&#59;
+            height&#58; 1&#46;5rem&#59;
+            &#123;
+        </code></pre>
 </div>
 <div class="JSiFrame" id="JSWiki">
-    <iframe src="https://en.wikipedia.org/wiki/JavaScript">JavaScript</iframe>
+    <p>CSS code snippet: NavBar</p>
 </div>
 <div class="TSiFrame" id="TSWiki">
-    <iframe src="https://en.wikipedia.org/wiki/TypeScript">TypeScript</iframe>
+    <p>CSS code snippet: NavBar</p>
 </div>
 <div class="angulariFrame" id="AngularWiki">
-    <iframe src="https://en.wikipedia.org/wiki/Angular_(web_framework)">Angular</iframe>
+    <p>CSS code snippet: NavBar</p>
 </div>

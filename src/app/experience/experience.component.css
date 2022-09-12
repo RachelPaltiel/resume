@@ -1,12 +1,12 @@
 div {
-    padding: 2rem;
+    padding: 1rem;
     margin: 1rem;
+    display: inline-block;
 }
 
 table {
     text-align: left;
     border-spacing: 0 1rem; 
-    
 }
 
 td , th {
