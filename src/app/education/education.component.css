@@ -1,7 +1,8 @@
 div {
-    padding: 2rem;
+    padding: 1rem;
+    max-width: 30rem;
+    min-height: 5rem;
     margin: 1rem;
-    display: inline-block;
 }
 
 table {
