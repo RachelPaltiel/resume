@@ -1,5 +1,23 @@
 div {
     padding: 1rem;
+    max-width: 30rem;
+    min-height: 5rem;
     margin: 1rem;
-    display: inline-block;
+}
+
+a {
+    color: #dee2e6;
+    display: block;
+    padding: 1rem;
+    font-family:'Trebuchet MS';
+    text-decoration: none;
+    border-radius: 1rem;
+    text-align: center;
+    width: 8rem;
+    background-color: #6c757c;
+}
+
+a:hover {
+    color: #6c757c;
+    background-color: #dee2e6;
 }

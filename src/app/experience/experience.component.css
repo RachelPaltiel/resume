@@ -1,7 +1,8 @@
 div {
     padding: 1rem;
+    max-width: 30rem;
+    min-height: 5rem;
     margin: 1rem;
-    display: inline-block;
 }
 
 table {
@@ -13,10 +14,6 @@ td , th {
     padding: 1rem;
     border-color: #dee2e6;
     background-color: #f0f5fa;
-}
-
-th {
-    margin: 1rem;
 }
 
 p {

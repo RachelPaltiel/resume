@@ -1,27 +1,24 @@
 .menu {
     list-style-type: none;
     display: flex;
-    max-width: 100;
     float: left;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
 }
 
-.menu li {
-    margin: 1rem;
-    margin-top: 2rem;
-}
 
 .menu a {
-    background-color: #dee2e6 ;
+    background-color: #dee2e6;
     text-decoration: none;
     border: none;
     color: #6c757c;
     text-align: center;
     font-family: 'Trebuchet MS';
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     border-radius: 5rem;
     padding: .5rem;
-
+    margin: 1rem;
 }
 
 .menu a:hover {
@@ -35,41 +32,21 @@
     color: #dee2e6;
 }
 
-
 .contactMe {
     list-style-type: none;
     display: flex;
-    max-width: 100%;
     float: right;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .contactMe li {
     margin: 1rem;
-    margin-top: 1rem;
 }
 
-.contactMe a {
-    background-color: #dee2e6 ;
-    text-decoration: none;
-    border: none;
-    color: #6c757c;
-    text-align: center;
-    font-family: 'Trebuchet MS';
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5rem;
-    padding: .5rem;
-
-}
-
-.contactMe a:hover {
+.contactMe img:hover {
     cursor:pointer;
-}
-
-.contactMe a:focus  {
-    background-color: #6c757c;
-    color: #dee2e6;
+    width: 2rem;
+    height: 2rem;
 }
 
 .contactMe img {
