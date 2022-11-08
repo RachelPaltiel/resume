@@ -1,44 +1,15 @@
 <div>
-<ul>
-        <h2>Client</h2>
-            <li>HTML</li>
-            <li>CSS</li>
-</ul>
-<ul>
-            <h2>Both</h2>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-        </ul>
-        <ul>
-            <h2>Server</h2>
-            <li>SQL</li>
-            <li>C#</li>
-            <li>Angular</li>
-        </ul>
-        <ul>
-            <h2>FrameWorks</h2>
-            <li>Asp.Net</li>
-            <li>Angular</li>
-        </ul>
-    <ul>
-        <h2>Tools</h2>
-        <li>Version Control: GitHub & SVN</li>
-        <li>Project Management: Jira & TFS</li>
-    </ul>
-</div>
-
-<div>
-    <ul>
-        <h2>Languages</h2>
-        <li>English: Native</li>
-        <li>Hebrew: Native</li>
-    </ul>
-</div>
-
-<div>
-    <ul>
-        <h2>Just for Fun</h2>
-        <li>Design: Figma & JustInMind</li>
-        <li>Insperation: Steve Jobs&</li>
-    </ul>
+    <h2>Tech Stack</h2>
+    <div>
+        <button (click)="showClient()">Client</button>
+        <button (click)="showServer()">Server</button>
+        <button (click)="showFrameWork()">FrameWork</button>
+        <button (click)="showTools()">Tools</button>        
+    </div>
+    <div class="techStack">
+        <p id="client">Client | HTML | CSS | JS | TS </p>        
+        <p id="server">SQL | C# </p>
+        <p id="frameWork">Angular | ASP.NET MVC </p>
+        <p id="tools">GitHub & SVN | Jira & TFS | Docker </p>
+    </div>
 </div>
