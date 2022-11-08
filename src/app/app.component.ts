@@ -8,5 +8,5 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'About Me';
-
+  console.log("Tov");
 }
