@@ -7,6 +7,5 @@ import { HeaderComponent } from './header/header.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'About Me';
-  console.log("Tov");
+  title = 'In a galaxy far far away';
 }
