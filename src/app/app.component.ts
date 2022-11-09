@@ -8,7 +8,4 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'About Me';
-  constructor() {
-    console.log("In a galaxy far far away");
-  }
 }

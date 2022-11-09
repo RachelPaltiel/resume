@@ -3,24 +3,42 @@ div {
     max-width: 30rem;
     min-height: 5rem;
     margin: 1rem;
+    margin-bottom: 0;
 }
 
 p {
     background-color: #fff;
     padding: 1rem;
+    margin: 0;
+    border-radius: 1rem;
 }
 
-table {
-    text-align: left;
-    border-spacing: .5rem .5rem; 
-    display: flex;
+.about {
+    float: left;
+    width: 30rem;
+    height: fit-content;
+    margin: 1rem;
+    margin-top: 0;
+    padding: 0;
 }
 
-td {
-    padding: .3;
-    margin-left: 0;
-    border-color: #dee2e6;
-    background-color: #fff;
-    min-width: 10rem;
-    text-align: center;
+.about h2 {
+    margin-top: 0;
+}
+
+.map {
+    float: left;
+    width: 40rem;
+    height: 40rem;
+    margin: 1rem;
+}
+
+.map h2 {
+    margin-top: 0;
+}
+
+iframe {
+    border-radius: 1rem;
+    width: 50rem; 
+    height: 23rem;
 }
