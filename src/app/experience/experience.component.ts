@@ -8,22 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  ShowEladDiv() {
-    document.getElementById("EladDiv")!.style.display = "block";
-    document.getElementById("FinbotDiv")!.style.display = "none";
-    document.getElementById("MyHrDiv")!.style.display = "none";
+  ShowEladQAS() {
+    document.getElementById("EladQA")!.style.display = "block";
+    document.getElementById("FinbotPM")!.style.display = "none";
+    document.getElementById("FinbotQA")!.style.display = "none";
   };
 
-  ShowFinbotDiv() {
-    document.getElementById("EladDiv")!.style.display = "none";
-    document.getElementById("FinbotDiv")!.style.display = "block";
-    document.getElementById("MyHrDiv")!.style.display = "none";
+  ShowFinbotPM() {
+    document.getElementById("EladQA")!.style.display = "none";
+    document.getElementById("FinbotPM")!.style.display = "block";
+    document.getElementById("FinbotQA")!.style.display = "none";
   };
 
-  ShowMyHRDiv() {
-    document.getElementById("EladDiv")!.style.display = "none";
-    document.getElementById("FinbotDiv")!.style.display = "none";
-    document.getElementById("MyHrDiv")!.style.display = "block";
+  ShowFinbotQA() {
+    document.getElementById("EladQA")!.style.display = "none";
+    document.getElementById("FinbotPM")!.style.display = "none";
+    document.getElementById("FinbotQA")!.style.display = "block";
   };
 
   constructor() { 

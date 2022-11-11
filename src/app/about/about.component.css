@@ -37,8 +37,12 @@ p {
     margin-top: 0;
 }
 
-iframe {
+.iframe {
     border-radius: 1rem;
     width: 50rem; 
     height: 23rem;
+}
+
+.aboutMain {
+    display: none;
 }

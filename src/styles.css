@@ -10,3 +10,52 @@ h1 {
     margin-left: 1.5rem;
     margin-bottom: 3rem;
 }
+
+.aboutMain {
+    margin-top: 3rem;
+}
+
+.aboutMain div {
+    padding: 1rem;
+    max-width: 30rem;
+    min-height: 5rem;
+    margin: 1rem;
+    margin-bottom: 0;
+}
+
+.aboutMain p {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 1rem;
+}
+
+.about {
+    float: left;
+    width: 30rem;
+    height: fit-content;
+    margin: 1rem;
+    margin-top: 0;
+    padding: 0;
+}
+
+.about h2 {
+    margin-top: 0;
+}
+
+.map {
+    float: left;
+    width: 40rem;
+    height: 40rem;
+    margin: 1rem;
+}
+
+.map h2 {
+    margin-top: 0;
+}
+
+.iframe {
+    border-radius: 1rem;
+    width: 50rem; 
+    height: 23rem;
+}

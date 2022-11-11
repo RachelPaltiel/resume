@@ -5,3 +5,11 @@ a {
     font-family:'Trebuchet MS';
     text-decoration: none;
 }
+
+div {
+    padding: 1rem;
+    max-width: 30rem;
+    min-height: 5rem;
+    margin: 1rem;
+    margin-bottom: 0;
+}
