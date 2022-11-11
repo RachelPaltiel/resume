@@ -1,48 +1,62 @@
 div {
-    padding: 1rem;
-    max-width: 30rem;
-    min-height: 5rem;
+    float: left;
+    max-width: 40rem;
     margin: 1rem;
-    margin-bottom: 0;
+    padding: 1rem;
 }
 
 p {
-    background-color: #fff;
-    padding: 1rem;
+    background-color: rgb(34, 31, 41);
+    padding: 1.5rem;
     margin: 0;
     border-radius: 1rem;
 }
 
 .about {
     float: left;
-    width: 30rem;
-    height: fit-content;
+    min-height: 20rem;
+    width: 18rem;
     margin: 1rem;
     margin-top: 0;
-    padding: 0;
+    padding: 1rem;
 }
 
-.about h2 {
+h2 {
+    padding: 1rem;
+    margin-bottom: 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+.sumUp {
+    float: left;
+    height: 20rem;
+    width: 13rem;
+    margin: 1rem;
+    margin-top: 0;
+    padding: 1rem;
+}
+
+.quote {
+    text-align: center;
+    float: left;
+    max-height: 2rem;
+    max-width: 36rem;
+    padding: 1rem;
+    margin: 1rem;
     margin-top: 0;
 }
 
 .map {
     float: left;
-    width: 40rem;
-    height: 40rem;
-    margin: 1rem;
+    margin: 0;
+    width: 36rem;
+    padding: 1rem;
 }
 
-.map h2 {
-    margin-top: 0;
-}
 
 .iframe {
-    border-radius: 1rem;
-    width: 50rem; 
-    height: 23rem;
-}
-
-.aboutMain {
-    display: none;
+    max-width: 6rem; 
+    max-height: 6rem;
+    border-radius: 3rem;
 }

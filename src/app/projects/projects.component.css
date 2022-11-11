@@ -1,24 +1,26 @@
 div {
     padding: 1rem;
-    max-width: 30rem;
-    min-height: 5rem;
-    margin: 1rem;
+    margin: 3rem;
+    width: 80rem;
+    display: inline-block;
 }
 
 a {
-    color: #dee2e6;
-    display: block;
-    padding: 1rem;
+    color: rgb(229, 211, 255);
     font-family:'Trebuchet MS';
     text-decoration: none;
     border-radius: 1rem;
     text-align: center;
-    width: 8rem;
-    background-color: #6c757c;
+    width: 20rem;
+    background-color: rgb(34, 31, 41);
     margin: 1rem;
+    margin-right: 3rem;
+    padding: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 a:hover {
-    color: #6c757c;
-    background-color: #dee2e6;
+    border: solid;
+    border-color: rgb(229, 211, 255);
 }
