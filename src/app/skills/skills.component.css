@@ -31,6 +31,7 @@ button {
     margin: 1.5rem;
     margin-right: 5rem;
     box-shadow: 0 0 5px rgb(229, 211, 255);
+    cursor: pointer;
 
 }
 
@@ -39,12 +40,14 @@ button:hover {
     color: rgb(229, 211, 255);
     box-shadow: 0 0 .5rem  rgb(229, 211, 255);
     left: 1em;
+    cursor: pointer;
 }
 
 button:focus  {
     background-color: rgb(229, 211, 255);
     color: rgb(34, 31, 41);
     box-shadow: 0 0 5px rgb(229, 211, 255);
+    cursor: pointer;
 }
 
 button:active {
