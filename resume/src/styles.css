@@ -1,0 +1,13 @@
+html {
+    background-color: rgb(12, 11, 14);
+    color:#ffff;
+    font-family: 'Trebuchet MS';
+    font-size: 1rem;
+}
+
+h1 , h2 {
+    color: rgb(229, 211, 255);
+    float: left;
+    margin-left: 1.5rem;
+    margin-bottom: 3rem;
+}
